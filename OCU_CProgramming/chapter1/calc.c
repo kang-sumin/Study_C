@@ -1,11 +1,11 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 int main(void) {
 
-	printf("2+3=%d\n", 2 + 3); //µ¡¼À addition
-	printf("2-3=%d\n", 2 - 3); //»¬¼À subtraction
-	printf("2*3=%d\n", 2 * 3); //°ö¼À multiplication
-	printf("2/3=%d\n", 2 / 3); //³ª´©±â division
+	printf("2+3=%d\n", 2 + 3); //ë§ì…ˆ addition
+	printf("2-3=%d\n", 2 - 3); //ëº„ì…ˆ subtraction
+	printf("2*3=%d\n", 2 * 3); //ê³±ì…ˆ multiplication
+	printf("2/3=%d\n", 2 / 3); //ë‚˜ëˆ„ê¸° division
 	
 	return 0;
 }
