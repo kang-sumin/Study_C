@@ -1,27 +1,27 @@
 #include <stdio.h>
 
 /*
-* void Æ÷ÀÎÅÍ´Â ÀÏ¹ÝÀûÀÎ Æ÷ÀÎÅÍ º¯¼ö¿Í´Â ´Þ¸® °¡¸®Å°´Â ´ë»óÀÌ µÇ´Â
-* µ¥ÀÌÅÍ Å¸ÀÔÀ» ¸í½ÃÇÏÁö ¾Ê´Â Æ÷ÀÎÅÍÀÌ´Ù.
-* µû¶ó¼­ º¯¼ö, ÇÔ¼ö, Æ÷ÀÎÅÍ µî ¾î¶°ÇÑ °ªµµ °¡¸®Å³ ¼ö ÀÖÁö¸¸,
-* Æ÷ÀÎÅÍ ¿¬»êÀÌ³ª ¸Þ¸ð¸® ÂüÁ¶¿Í °°Àº ÀÛ¾÷Àº ÇÒ ¼ö ¾ø´Ù.
+* void í¬ì¸í„°ëŠ” ì¼ë°˜ì ì¸ í¬ì¸í„° ë³€ìˆ˜ì™€ëŠ” ë‹¬ë¦¬ ê°€ë¦¬í‚¤ëŠ” ëŒ€ìƒì´ ë˜ëŠ”
+* ë°ì´í„° íƒ€ìž…ì„ ëª…ì‹œí•˜ì§€ ì•ŠëŠ” í¬ì¸í„°ì´ë‹¤.
+* ë”°ë¼ì„œ ë³€ìˆ˜, í•¨ìˆ˜, í¬ì¸í„° ë“± ì–´ë– í•œ ê°’ë„ ê°€ë¦¬í‚¬ ìˆ˜ ìžˆì§€ë§Œ,
+* í¬ì¸í„° ì—°ì‚°ì´ë‚˜ ë©”ëª¨ë¦¬ ì°¸ì¡°ì™€ ê°™ì€ ìž‘ì—…ì€ í•  ìˆ˜ ì—†ë‹¤.
 * 
-* Áï, void Æ÷ÀÎÅÍ´Â ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ´Â°Í ÀÌ¿Ü¿¡´Â ¾Æ¹«°Íµµ ÇÒ ¼ö ¾ø´Â Æ÷ÀÎÅÍÀÌ´Ù.
+* ì¦‰, void í¬ì¸í„°ëŠ” ì£¼ì†Œê°’ì„ ì €ìž¥í•˜ëŠ”ê²ƒ ì´ì™¸ì—ëŠ” ì•„ë¬´ê²ƒë„ í•  ìˆ˜ ì—†ëŠ” í¬ì¸í„°ì´ë‹¤.
 * 
 */
 
 
 int main() {
 
-	int num = 10;	//º¯¼ö ¼±¾ð
-	void* ptr_num = &num;	//void Æ÷ÀÎÅÍ ¼±¾ð
+	int num = 10;	//ë³€ìˆ˜ ì„ ì–¸
+	void* ptr_num = &num;	//void í¬ì¸í„° ì„ ì–¸
 	
-	printf("º¯¼ö num°¡ ÀúÀåÇÏ°í ÀÖ´Â °ªÀº %dÀÔ´Ï´Ù.\n", num);
-	printf("void Æ÷ÀÎÅÍ ptr_num°¡ °¡¸®Å°´Â ÁÖ¼Ò¿¡ ÀúÀåµÈ °ªÀº %dÀÔ´Ï´Ù.\n", *(int*)ptr_num);
+	printf("ë³€ìˆ˜ numê°€ ì €ìž¥í•˜ê³  ìžˆëŠ” ê°’ì€ %dìž…ë‹ˆë‹¤.\n", num);
+	printf("void í¬ì¸í„° ptr_numê°€ ê°€ë¦¬í‚¤ëŠ” ì£¼ì†Œì— ì €ìž¥ëœ ê°’ì€ %dìž…ë‹ˆë‹¤.\n", *(int*)ptr_num);	//ëª…ì‹œì  íƒ€ìž…ë³€í™˜
 
-	//void Æ÷ÀÎÅÍ´Â »ç¿ëÇÒ¶§¸¶´Ù "¸í½ÃÀû Å¸ÀÔ º¯È¯"À» ÇÏ°í ³­ µÚ¿¡ »ç¿ëÇØ¾ß ÇÑ´Ù.
+	//void í¬ì¸í„°ëŠ” ì‚¬ìš©í• ë•Œë§ˆë‹¤ "ëª…ì‹œì  íƒ€ìž… ë³€í™˜"ì„ í•˜ê³  ë‚œ ë’¤ì— ì‚¬ìš©í•´ì•¼ í•œë‹¤.
 	*(int*)ptr_num = 20;
-	printf("void Æ÷ÀÎÅÍ ptr_num°¡ °¡¸®Å°´Â ÁÖ¼Ò¿¡ ÀúÀåµÈ °ªÀº %dÀÔ´Ï´Ù.\n", *(int*)ptr_num);
+	printf("void í¬ì¸í„° ptr_numê°€ ê°€ë¦¬í‚¤ëŠ” ì£¼ì†Œì— ì €ìž¥ëœ ê°’ì€ %dìž…ë‹ˆë‹¤.\n", *(int*)ptr_num);	//ëª…ì‹œì  íƒ€ìž…ë³€í™˜
 
 	return 0;
 	}
