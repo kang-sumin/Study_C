@@ -77,7 +77,7 @@ void floyd(int n, const int W[MAX_VT][MAX_VT], int D[MAX_VT][MAX_VT], int P[MAX_
 }
 
 
-//결과출력 함수
+//최단경로 출력 함수
 void path(int q, int r) {
 
 	//-1이 안되도록 만듦
