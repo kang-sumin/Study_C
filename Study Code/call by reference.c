@@ -2,7 +2,8 @@
 
 /*
 * call by reference는 C++에만 있는 문법이고,
-* call by address라고 봐야한다.
+* C에서는 call by value와 call by address(call by reference)문법으로 봤지만,
+* C에서 call by reference처럼 본 call by address는 정확히 call by value라고 봐야한다.
 *
 * 그리고 엄연히 따지자면 call by address는 call by value라고 볼수 있다.
 * 주소도 값이기 때문에 값을 복사해 주는 것이기 때문이다.
