@@ -7,7 +7,7 @@
 */
 
 
-//local()함수의 원형 선언함
+//local()함수의 원형 선언
 void local(int num);
 
 int main() {
