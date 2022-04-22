@@ -1,31 +1,31 @@
 #include <stdio.h>
-/* <°ª¿¡ ÀÇÇÑ Àü´Þ(call by value)>
-* °ª¿¡ ÀÇÇÑ Àü´Þ ¹æ¹ýÀº ÀÎ¼ö·Î Àü´ÞµÇ´Â º¯¼ö°¡ °¡Áö°í ÀÖ´Â °ªÀ»
-* ÇÔ¼ö ³»ÀÇ ¸Å°³º¯¼ö¿¡ º¹»çÇÏ´Â ¹æ½ÄÀÌ´Ù.
-* ÀÌ·¸°Ô º¹»çµÈ °ªÀ¸·Î ÃÊ±âÈ­µÈ ¸Å°³º¯¼ö´Â ÀÎ¼ö·Î Àü´ÞµÈ º¯¼ö¿Í´Â ¿ÏÀüÈ÷ º°°³ÀÇ º¯¼ö°¡ µÈ´Ù.
-* µû¶ó¼­ ÇÔ¼ö ³»¿¡¼­ÀÇ ¸Å°³º¯¼ö º¯°æÀº ÀÎ¼ö·Î Àü´ÞµÇ´Â º¯¼ö¿¡ ¾Æ¹«·± ¿µÇâÀ» ¹ÌÄ¡Áö ¾Ê´Â´Ù.
+/* <ê°’ì— ì˜í•œ ì „ë‹¬(call by value)>
+* ê°’ì— ì˜í•œ ì „ë‹¬ ë°©ë²•ì€ ì¸ìˆ˜ë¡œ ì „ë‹¬ë˜ëŠ” ë³€ìˆ˜ê°€ ê°€ì§€ê³  ìžˆëŠ” ê°’ì„
+* í•¨ìˆ˜ ë‚´ì˜ ë§¤ê°œë³€ìˆ˜ì— ë³µì‚¬í•˜ëŠ” ë°©ì‹ì´ë‹¤.
+* ì´ë ‡ê²Œ ë³µì‚¬ëœ ê°’ìœ¼ë¡œ ì´ˆê¸°í™”ëœ ë§¤ê°œë³€ìˆ˜ëŠ” ì¸ìˆ˜ë¡œ ì „ë‹¬ëœ ë³€ìˆ˜ì™€ëŠ” ì™„ì „ížˆ ë³„ê°œì˜ ë³€ìˆ˜ê°€ ëœë‹¤.
+* ë”°ë¼ì„œ í•¨ìˆ˜ ë‚´ì—ì„œì˜ ë§¤ê°œë³€ìˆ˜ ë³€ê²½ì€ ì¸ìˆ˜ë¡œ ì „ë‹¬ë˜ëŠ” ë³€ìˆ˜ì— ì•„ë¬´ëŸ° ì˜í–¥ì„ ë¯¸ì¹˜ì§€ ì•ŠëŠ”ë‹¤.
 */
 
 
-//local()ÇÔ¼öÀÇ ¿øÇü ¼±¾ð
+//local()í•¨ìˆ˜ì˜ ì›í˜• ì„ ì–¸í•¨
 void local(int num);
 
 int main() {
 
 	int var = 10;
-	printf("º¯¼ö varÀÇ ÃÊ±ê°ªÀº %d ÀÔ´Ï´Ù.\n", var);
+	printf("ë³€ìˆ˜ varì˜ ì´ˆê¹ƒê°’ì€ %d ìž…ë‹ˆë‹¤.\n", var);
 
-	local(var);	//varÀº ÀÎ¼öÀÌ´Ù.(var is argument)
-	printf("local() ÇÔ¼ö È£Ãâ ÈÄ º¯¼ö varÀÇ °ªÀº %d ÀÔ´Ï´Ù.\n", var);
+	local(var);	//varì€ ì¸ìˆ˜ì´ë‹¤.(var is argument)
+	printf("local() í•¨ìˆ˜ í˜¸ì¶œ í›„ ë³€ìˆ˜ varì˜ ê°’ì€ %d ìž…ë‹ˆë‹¤.\n", var);
 	return 0;
 }
 
-//numÀº ÀÎ¼ö·Î º¯¼ö varÀÇ °ªÀ» Àü´Þ¹ÞÀ½
-void local(int num) //numÀº ¸Å°³º¯¼öÀÌ´Ù. (num is parameter)
+//numì€ ì¸ìˆ˜ë¡œ ë³€ìˆ˜ varì˜ ê°’ì„ ì „ë‹¬ë°›ìŒ
+void local(int num) //numì€ ë§¤ê°œë³€ìˆ˜ì´ë‹¤. (num is parameter)
 {
 	/*
-	* ÇÔ¼ö ³»¿¡¼­ ¸Å°³º¯¼ö numÀÇ °ªÀ» º¯°æÇÏ´õ¶óµµ
-	* ¿ø·¡ÀÎ¼ö·Î Àü´ÞµÈ º¯¼ö var°ªÀº Àý´ë º¯°æµÇÁö ¾ÊÀ½
+	* í•¨ìˆ˜ ë‚´ì—ì„œ ë§¤ê°œë³€ìˆ˜ numì˜ ê°’ì„ ë³€ê²½í•˜ë”ë¼ë„
+	* ì›ëž˜ì¸ìˆ˜ë¡œ ì „ë‹¬ëœ ë³€ìˆ˜ varê°’ì€ ì ˆëŒ€ ë³€ê²½ë˜ì§€ ì•ŠìŒ
 	*/
 	num += 10;
 }
