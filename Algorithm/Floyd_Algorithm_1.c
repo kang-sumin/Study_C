@@ -1,4 +1,4 @@
-﻿//Floyd Algorithm Homework_#2 이다
+﻿//Floyd Algorithm Homework_#2 , path 없음
 
 #include <stdio.h>
 
