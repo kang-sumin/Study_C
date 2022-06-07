@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-func10(int x); //함수 선언, 출력자료형이 없는 함수임
+func10(int x); //함수 선언, 출력자료형이 없는 함수임, 함수 구현을 main()문 뒤에 하려면 main()문 앞에 선언 해주어야 함
 
 int main() {
 	
